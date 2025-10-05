@@ -1,0 +1,114 @@
+# ==========================================
+# Unreal Engine 5.6 + Visual Studio .gitignore
+# ==========================================
+
+# --- User-specific / IDE files ---
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.userprefs
+*.sln.docstates
+*.VC.db
+*.VC.opendb
+*.ncb
+*.sdf
+*.opensdf
+
+# --- OS-specific ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# --- Build artifacts ---
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+Build/BuildRules/
+Build/Receipts/
+
+# --- Generated project files ---
+*.xcodeproj/
+*.xcworkspace/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.db
+*.opendb
+
+# --- Logs, crashes, backups, autosaves ---
+*.log
+*.tlog
+*.tmp
+*.temp
+*.bak
+*.orig
+*.swp
+*~
+Saved/Logs/
+Saved/Crashes/
+Saved/Autosaves/
+Saved/Backup/
+
+# --- Packaged builds ---
+WindowsNoEditor/
+Windows/
+LinuxNoEditor/
+MacNoEditor/
+Android_ASTC/
+Android_ETC1/
+Android_ETC2/
+Android_DXT/
+iOS/
+HTML5/
+Shipping/
+Test/
+Development/
+
+# --- Config ---
+# Keep the Config folder itself, but ignore local-only settings
+Config/*
+!Config/Default*.ini
+
+# --- Content ---
+# Keep core content; ignore per-user or temporary collections
+Content/Collections/
+Content/Developers/
+Content/StarterContent/
+DerivedDataCache/
+ShaderCache/
+
+# --- Plugins ---
+Plugins/*/Binaries/
+Plugins/*/Intermediate/
+Plugins/*/DerivedDataCache/
+Plugins/*/Saved/
+
+# --- Engine (if using source build) ---
+Engine/Intermediate/
+Engine/Binaries/
+Engine/Saved/
+Engine/DerivedDataCache/
+
+# --- Misc / optional ---
+node_modules/
+*.pdb
+*.idb
+*.obj
+*.pch
+*.dll
+*.exe
+*.manifest
+*.ipch
+*.rsp
+
+# --- Local-only build cache ---
+LocalBuildCache/
+.cache/
+*.vspscc
+*.scc
