@@ -16,7 +16,9 @@ void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
 
-	UE_LOG(LogTemp, Display, TEXT("Hello from MovingPlatform!"));
+	UE_LOG(LogTemp, Display, TEXT("Hello from MovingPlatform!... first time :-)"));
+	UE_LOG(LogTemp, Display, TEXT("Hello from MovingPlatform!... second time!! :-)"));
+	UE_LOG(LogTemp, Display, TEXT("Hello from MovingPlatform!... thrid time.. wow!! :-)"));
 	
 }
 
