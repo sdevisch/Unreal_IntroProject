@@ -1,8 +1,8 @@
 # ==========================================
-# Unreal Engine 5.6 + Visual Studio .gitignore
+# Unreal Engine 5.6 Cross-Platform .gitignore
 # ==========================================
 
-# --- User-specific / IDE files ---
+# --- IDE / editor junk ---
 .vs/
 .vscode/
 .idea/
@@ -13,17 +13,20 @@
 *.sln.docstates
 *.VC.db
 *.VC.opendb
-*.ncb
-*.sdf
-*.opensdf
+*.code-workspace
 
-# --- OS-specific ---
+# --- OS metadata ---
+.DS_Store
+.AppleDouble
+.LSOverride
 Thumbs.db
 ehthumbs.db
 Desktop.ini
-.DS_Store
+Icon?
+.Spotlight-V100
+.Trashes
 
-# --- Build artifacts ---
+# --- Unreal build / cache output ---
 Binaries/
 DerivedDataCache/
 Intermediate/
@@ -31,17 +34,13 @@ Saved/
 Build/BuildRules/
 Build/Receipts/
 
-# --- Generated project files ---
-*.xcodeproj/
-*.xcworkspace/
-*.sln
-*.vcxproj
-*.vcxproj.filters
-*.vcxproj.user
-*.db
-*.opendb
+# --- Engine (if source build present) ---
+Engine/Intermediate/
+Engine/Binaries/
+Engine/Saved/
+Engine/DerivedDataCache/
 
-# --- Logs, crashes, backups, autosaves ---
+# --- Logs / crashes / autosaves ---
 *.log
 *.tlog
 *.tmp
@@ -55,9 +54,8 @@ Saved/Crashes/
 Saved/Autosaves/
 Saved/Backup/
 
-# --- Packaged builds ---
+# --- Packaged / staged builds ---
 WindowsNoEditor/
-Windows/
 LinuxNoEditor/
 MacNoEditor/
 Android_ASTC/
@@ -71,16 +69,13 @@ Test/
 Development/
 
 # --- Config ---
-# Keep the Config folder itself, but ignore local-only settings
 Config/*
-!Config/Default*.ini
+!Config/Default*.ini        # keep default project configs
 
 # --- Content ---
-# Keep core content; ignore per-user or temporary collections
 Content/Collections/
 Content/Developers/
 Content/StarterContent/
-DerivedDataCache/
 ShaderCache/
 
 # --- Plugins ---
@@ -89,14 +84,19 @@ Plugins/*/Intermediate/
 Plugins/*/DerivedDataCache/
 Plugins/*/Saved/
 
-# --- Engine (if using source build) ---
-Engine/Intermediate/
-Engine/Binaries/
-Engine/Saved/
-Engine/DerivedDataCache/
+# --- Generated project / IDE files ---
+*.sln
+*.vcxproj*
+*.xcodeproj/
+*.xcworkspace/
+*.xcuserstate
+*.xcuserdata/
+*.xcconfig
+*.pbxuser
+*.mode1v3
+*.mode2v3
 
-# --- Misc / optional ---
-node_modules/
+# --- C++ compilation intermediates ---
 *.pdb
 *.idb
 *.obj
@@ -104,11 +104,19 @@ node_modules/
 *.dll
 *.exe
 *.manifest
-*.ipch
 *.rsp
+*.ipch
+*.o
+*.dSYM/
 
-# --- Local-only build cache ---
-LocalBuildCache/
+# --- Package managers / misc ---
+node_modules/
 .cache/
+LocalBuildCache/
 *.vspscc
 *.scc
+
+# --- Temporary Unreal scripts / reports ---
+ScriptBackups/
+AutomationReport/
+Saved/StagedBuilds/
