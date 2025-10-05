@@ -2,7 +2,7 @@
 # Unreal Engine 5.6 Cross-Platform .gitignore
 # ==========================================
 
-# --- IDE / editor junk ---
+# --- IDE / Editor metadata ---
 .vs/
 .vscode/
 .idea/
@@ -12,7 +12,9 @@
 *.userprefs
 *.sln.docstates
 *.VC.db
-*.VC.opendb
+*.opendb
+*.ipch
+*.db
 *.code-workspace
 
 # --- OS metadata ---
@@ -26,10 +28,10 @@ Icon?
 .Spotlight-V100
 .Trashes
 
-# --- Unreal build / cache output ---
+# --- Unreal build & cache output ---
 Binaries/
-DerivedDataCache/
 Intermediate/
+DerivedDataCache/
 Saved/
 Build/BuildRules/
 Build/Receipts/
@@ -68,11 +70,11 @@ Shipping/
 Test/
 Development/
 
-# --- Config ---
+# --- Config (keep defaults only) ---
 Config/*
-!Config/Default*.ini        # keep default project configs
+!Config/Default*.ini
 
-# --- Content ---
+# --- Content (ignore temp/dev content) ---
 Content/Collections/
 Content/Developers/
 Content/StarterContent/
